@@ -1,0 +1,260 @@
+*{
+    font-family: montserrat;
+}
+:root{
+    --primary:#fea116;
+    --light:#f1f8ff;
+    --dark:#0f172b;
+}
+body{
+    background-color: #fff;
+}
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: #000;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #000;
+}
+.book-room{
+    border: none;
+    opacity: 8;
+    
+     
+}
+.room-text{
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 500;
+   
+}
+.book-room a:hover{
+    background: #fea116;
+    
+}
+.btn{
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15 23 43 0.7);
+    z-index: 1;
+    
+}
+.booking{
+    position: relative;
+    margin-top: -100px !important;
+    z-index: 1;
+}
+.section-tittle{
+    position: relative;
+    display: inline-block;
+}
+.section-tittle::before{
+    position: absolute;
+    content: "";
+    width: 45%;
+    height: 2px;
+    top: 50%;
+    left: -55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+.section-tittle::after{
+    position: absolute;
+    content: "";
+    width: 45%;
+    height: 2px;
+    top: 50%;
+    right:-55px;
+    margin-top: -1px;
+    background: var(--primary);
+}
+.section-tittle.text-start::before,
+.section-tittle.text-end::after{
+    display: none;
+}
+
+/* services section */
+.service-item{
+    height: 250px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 0 45px rgba(0,0,0,0.8);
+    transition: 0.5s;
+}
+.service-item:hover{
+    background: var(--primary);
+
+}
+.service-item.service-icons{
+    margin: 0 auto 30px auto;
+    width: 65px;
+    height: 65px;
+    transition: 0.5s;
+}
+.service-item i,
+.service-item p,
+.service-item h5{
+    transition: 0.5s;
+}
+.service-item:hover i,
+.service-item:hover p,
+.service-item:hover h5 {
+    color: #fff !important;
+}
+.newsletter{
+    position: relative;
+    z-index: 1;
+}
+/* footer */
+.footer{
+    position: relative;
+    margin-top: -110px;
+    padding-top: 180px;
+}
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    transition: 0.3s;
+
+}
+.footer .btn.btn-link::before{
+    position: relative;
+    content: ;
+    font-family: font Awesome 5 Free;
+    font-weight: 900;
+    margin-right: 10px;
+    
+}
+.footer .btn.btn-link:focus{
+    letter-spacing: 1px;
+     box-shadow: none;
+}
+.footer .copyright{
+    padding: 25px;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
+}
+.footer .copyright a{
+    color: var(--light);
+
+}
+.footer .footer-menu a{
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(155, 255, 255, 0.3);
+}
+.footer .footer-menu a:last-child{
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+.booking{
+    animation: slideInFromRight 1s ease-in;
+}
+/*  responsiveness */
+@media (max-width:500px){
+    .carousel-caption{
+        bottom: 350px;
+        margin-bottom:200px ;
+    }
+}
+
+ @media(max-width:768px) {
+    .navbar-nav{
+        text-align: center;
+    }
+    .img-area img{
+        width: 100%;
+    }
+       .img-area {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-item{
+        height: 100vh;
+        min-height: 300px;
+    }
+    .carousel-caption{
+        text-align: center; 
+        margin-top: 5%;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .booking{
+        animation: slideInFromBottom 1s ease-in;
+    }
+    
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .animated{
+    animation: sideInFromRight;
+  }
